@@ -1,0 +1,14 @@
+--sum of even numbers UP TO n
+--Ex:2+4+6+8+10....
+
+declare
+n number:=5;
+total number:=0;
+begin
+for i in 1..n loop
+if mod(i,2)=0 then
+    total:=total+i;
+end if;
+end loop;
+dbms_output.put_line('The sum is '||total);
+end;

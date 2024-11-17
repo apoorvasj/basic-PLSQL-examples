@@ -1,0 +1,13 @@
+--create a procedure to get the student's hobbies if name is given.
+--note that student name and hobbies are available in two different tables with the common attribute being
+--roll number.
+create or replace procedure stu as
+stuname varchar2(10):='Apoorva';
+hobby_name varchar2(10);
+begin
+    select hobby into hobby_name from student join hobbies on student.
+    roll_num=hobbies.roll_num where student.name=stuname;
+	dbms_output.put_line('Hobby is '||hobby_name);
+end;
+
+--use execute stu to run this code.

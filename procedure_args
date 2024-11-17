@@ -1,0 +1,21 @@
+--find the minimum of two numbers using procedures.
+declare
+a number;
+b number;
+c number;
+procedure findmin(x IN number, y IN number, z OUT number) IS
+    begin
+if x<y then
+    z:=x;
+else 
+    z:=y;
+end if;
+end;
+
+begin
+a:=10;
+b:=20;
+findmin(a,b,c);
+dbms_output.put_line('Minimum number is '||c);
+end;
+

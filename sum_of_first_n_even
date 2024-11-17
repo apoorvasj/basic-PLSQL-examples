@@ -1,0 +1,12 @@
+--sum of first n even number series
+--Ex:2+4+6+8+10....
+
+declare
+n number:=5;
+total number:=0;
+begin
+for i in 1..  loop
+total:=total + 2*i;
+end loop;
+dbms_output.put_line('The sum is '||total);
+end;

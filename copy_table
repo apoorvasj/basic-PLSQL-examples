@@ -1,0 +1,7 @@
+--copy contents of one table into another
+begin
+for student_rec in (select * from student) loop
+	insert into student1(name,roll_num) values(student_rec.name, student_rec.roll_num);
+end loop;
+commit;
+end;

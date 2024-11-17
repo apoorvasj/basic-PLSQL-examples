@@ -1,0 +1,10 @@
+--Print numbers in reverse from 100 to 1
+declare
+n number:=100;
+
+begin
+while n>=1 loop
+    dbms_output.put_line(n);
+	n:=n-1;
+end loop;
+end;
